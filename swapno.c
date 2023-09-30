@@ -1,23 +1,17 @@
 # include<stdio.h>
-void swap(int a , int b);
-void _swap(int*a , int *b);
+void swap(int ,int);
 int main(){
-    int x = 6, y = 4;
-    swap(x , y);
-        printf("x = %d & y = %d\n", x , y);
-    
-    _swap(&x , &y);
-        printf("x = %d & y = %d\n", x , y);
-    
+    int a , b;
+    printf("Enter the value of a and b :");
+    scanf("%d%d",&a , &b);
+    swap(a,b);
+    printf("%d\n%d\n",a , b);
     return 0;
 }
-void swap(int a , int b){
-    int t = a;
-    a = b;
-    b = t;
-}
-void _swap(int *a , int *b){
-    int t = *a;
-    *a = *b;
-    *b = t;
+void swap(int x , int y){
+    int temp =x;
+    x = y;
+   y = temp;
+    printf("\n%d\n%d\n",x , y);
+   
 }
